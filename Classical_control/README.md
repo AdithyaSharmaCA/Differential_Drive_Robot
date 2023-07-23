@@ -3,10 +3,10 @@ Differential Drive robot implemented using Pybullet and Gym
 ## License 
 MIT License
 ## Needed packages
-### pybullet - pip install pybullet
-### numpy - pip install numpy
-### gym - pip install gym
-### matplotlib - pip install matplotlib
+pybullet - pip install pybullet <br/>
+numpy - pip install numpy <br/>
+gym - pip install gym <br/>
+matplotlib - pip install matplotlib
 ## File desriptions
 ### 4_wheel_differential_drive_robot.urdf
 This is URDF model of the robot. Collision parameters and mass values have been incorporated.
