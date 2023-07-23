@@ -1,7 +1,7 @@
 # Differential_Drive_Classic_Control
-Classical and Reinforcement learning approaches for differential drive robots
-## Classical Control for differential drive robot
 Differential Drive robot implemented using Pybullet and Gym
+## Authors
+Adithya Sharma C A and Shreya Kishor
 ## License 
 MIT License
 ## Needed packages
