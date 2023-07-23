@@ -1,7 +1,7 @@
 ## Custom Gym environment for differential drive robot
 Differential Drive robot implemented using Pybullet and Gym
 ## Authors
-### -Adithya Sharma C A and Shreya Kishor
+### Adithya Sharma C A and Shreya Kishor
 ## License 
 MIT License
 ## Needed packages
