@@ -3,17 +3,17 @@ Differential Drive robot implemented using Pybullet and Gym
 ## License 
 MIT License
 ## Needed packages
-# pybullet - pip install pybullet
-# numpy - pip install numpy
-# gym - pip install gym
-# matplotlib - pip install matplotlib
+### pybullet - pip install pybullet
+### numpy - pip install numpy
+### gym - pip install gym
+### matplotlib - pip install matplotlib
 ## File desriptions
-# 4_wheel_differential_drive_robot.urdf
+### 4_wheel_differential_drive_robot.urdf
 This is URDF model of the robot. Collision parameters and mass values have been incorporated.
-# error_plate.urdf
+### error_plate.urdf
 URDF file to represent the landing plate of the robot.
-# map3.urdf
+### map3.urdf
 URDF file to represent a confined space
-# classical_control.ipynb
+### classical_control.ipynb
 The robot has been modelled to travel in the entire plane bounded by the map.<br/>
 Uses classical controllers for linear velocity and angular velocity. Has an algorithm for taking curved turns and navigate to required end points.
