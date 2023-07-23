@@ -2,8 +2,9 @@
 Differential Drive robot implemented using Pybullet and Gym
 ## Authors
 Adithya Sharma C A and Shreya Kishor
-## License 
-MIT License
+## License and Copyright
+MIT License<br/>
+Copyright © 2023. All rights lie with Adithya Sharma C A and Shreya Kishor.
 ## Needed packages
 pybullet - pip install pybullet <br/>
 numpy - pip install numpy <br/>
