@@ -1,0 +1,218 @@
+<robot name="4_wheel_differential_drive_robot">
+<!--BASE LINK SECTION-->
+	<link name="base_link">
+		<visual>
+          <origin xyz="0 0 0.4572" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.3048 0.3048 0.9144"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="1 0.3 0.1 1" />
+            </material>
+		</visual>
+        <collision>
+          <origin xyz="0 0 0.4572" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.3048 0.3048 0"/>
+            </geometry>
+		</collision>
+        <inertial>
+            <mass value="10"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!--the values for moment of inertia has been hard coded-->
+            <!--need to addin a xacro file to have function parameter functionality-->
+            <inertia ixx="0.0774192" ixy="0" ixz="0" iyy="0.0774192" iyz="0" izz="0.1548384"/>
+        </inertial>
+	</link>
+<!--LEFT FRONT WHEEL SECTION (+,-)-->
+    <link name="left_front_wheel">
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.25"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!--the values for moment of inertia has been hard coded-->
+            <!--need to addin a xacro file to have function parameter functionality-->
+            <inertia ixx="0.000010013" ixy="0" ixz="0" iyy="0.000010013" iyz="0" izz="0.00000333"/>
+        </inertial>
+    </link>
+
+	<joint name="left_front_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link = "left_front_wheel"/>
+        <origin xyz="0.1524 -0.1524 0" rpy="1.5708 0 0"/>
+        <axis xyz="0 0 1"/>
+	</joint>
+
+<!--LEFT REAR WHEEL SECTION (-,-)-->
+    <link name="left_rear_wheel">
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+                    
+        </visual>
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.25"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!--the value for moment of inertia has been hard coded-->
+            <!--need to addin a xacro file to have function parameter functionality-->
+            <inertia ixx="0.000010013" ixy="0" ixz="0" iyy="0.000010013" iyz="0" izz="0.00000333"/>
+        </inertial>
+    </link>
+
+	<joint name="left_rear_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link = "left_rear_wheel"/>
+   	  <origin xyz="-0.1524 -0.1524 0" rpy="1.5708 0 0"/>
+      <axis xyz="0 0 1"/>
+	</joint>
+
+<!--RIGHT FRONT WHEEL SECTION (+,+)-->
+    <link name="right_front_wheel">
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+        
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+            
+        </visual>
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.25"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!--the values for moment of inertia has been hard coded-->
+            <!--need to addin a xacro file to have function parameter functionality-->
+            <inertia ixx="0.000010013" ixy="0" ixz="0" iyy="0.000010013" iyz="0" izz="0.00000333"/>
+        </inertial>
+    </link>
+
+	<joint name="right_front_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link = "right_front_wheel"/>
+   	  <origin xyz="0.1524 0.1524 0" rpy="1.5708 0 0" />
+      <axis xyz="0 0 1"/>
+	</joint>
+
+<!--RIGHT REAR WHEEL SECTION (-,+)-->
+    <link name="right_rear_wheel">
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+            
+        </visual>
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+            
+        </collision>
+        <inertial>
+            <mass value="0.25"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!--the values for moment of inertia has been hard coded-->
+            <!--need to addin a xacro file to have function parameter functionality-->
+            <inertia ixx="0.000010013" ixy="0" ixz="0" iyy="0.000010013" iyz="0" izz="0.00000333"/>
+        </inertial>
+    </link>
+
+	<joint name="right_rear_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link = "right_rear_wheel"/>
+   	  <origin xyz="-0.1524 0.1524 0" rpy="1.5708 0 0" />
+      <axis xyz="0 0 1"/>
+	</joint>
+<!-- CAMERA_1 SECTION  -->
+<link name="camera_1">
+	<visual>
+      	<origin xyz="0 0 0" rpy="0 0 0"/>
+      	<geometry>
+          	<box size="0.1 0.05 0.2"/>
+      	</geometry>
+	</visual>
+</link>
+<joint name="camera1_base_joint" type="revolute">
+  <parent link="base_link"/>
+  <child link = "camera_1"/>
+  <origin xyz="0 0.1024 1.0144" rpy="0 0 0"/>
+  <axis xyz = "0 0 1"/>
+  <limit lower="-1.5708" upper="1.5708" effort="10" velocity="0.05" />
+</joint>
+<!-- CAMERA_2 SECTION  -->
+<link name="camera_2">
+	<visual>
+      	<origin xyz="0 0 0" rpy="0 0 0"/>
+      	<geometry>
+          	<box size="0.1 0.05 0.2"/>
+      	</geometry>
+	</visual>
+</link>
+<joint name ="camera2_base_joint" type="revolute">
+  <parent link="base_link"/>
+  <child link = "camera_2"/>
+  <origin xyz="0 -0.1024 1.0144" rpy="0 0 0"/>
+  <axis xyz = "0 0 1"/>
+  <limit lower="-1.5708" upper="1.5708" effort="10" velocity="0.05" />
+</joint>
+
+<!-- LIDAR SECTION -->
+<link name = "lidar">
+	<visual>
+      	<origin xyz="0 0 1.0644" rpy="0 0 0"/>
+      	<geometry>
+          	<cylinder radius="0.025" length="0.3"/>
+      	</geometry>
+    </visual>
+</link>
+<joint name="lidar_base_joint" type="continuous">
+	<parent link="base_link"/>
+	<child link="lidar"/>
+	<origin xyz = "0 0 0" rpy = "0 0 0"/>
+	<axis xyz="0 0 1"/>
+</joint>
+</robot>
